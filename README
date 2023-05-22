@@ -1,0 +1,24 @@
+MUSAT-BURCEA Adrian 312CB
+SD Tema 1
+
+Tabela hash implementata cu liste dublu inlantuite circulare generice.
+Pentru ca inserarea in tabela se face in mod ordonat, fiecare lista
+va fi ordonata crescator, iar adresa ei de inceput (cea din vectorul 
+de pointeri) va fi mereu adresa celui mai mic element. Pentru parcurgere
+am pornit de la adresa de inceput, mergand mai departe pana cand se
+intalneste iar adresa de inceput, parcurgere implementata cu do while.
+
+Programul citeste fiecare linie din fisierul de input, identifica operatia
+ceruta si argumentele ei si o executa daca este valida. 
+Pentru inserarea ordonata se verifica toate cazurile (lista de la hashul
+corespunzator nu exista => se initializeaza cu un element, cel care trebuie
+inserat; elementul de inserat este mai mic decat primul => se insereaza
+la inceputul listei si se actualizeaza adresa de inceput; elementul este
+mai mare decat primul => se parcurge lista si se insereaza dupa ce sunt 
+parcurse toate elementele mai mici decat el)
+Eliminarea se face in mod similar pt fiecare caz: lista are mai multe elemente
+(daca se elimina primul element, se actualizeaza inceputul ei) sau lista
+are un singur element (acesta se elibereaza si adresa listei va fi NULL)
+
+Mai multe detalii despre aceste functii si despre cele de cautare/afisare
+se gasesc in comentarii.
